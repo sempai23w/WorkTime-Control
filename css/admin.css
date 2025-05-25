@@ -1,0 +1,44 @@
+/* Estilo global para o painel administrativo */
+body,
+.card,
+.btn,
+.form-control,
+.navbar {
+    font-family: 'Poppins', Arial, sans-serif !important;
+}
+
+.card,
+.navbar,
+.form-control,
+.btn {
+    border-radius: 1.5rem !important;
+}
+
+.card,
+.navbar {
+    box-shadow: 0 4px 24px 0 rgba(220, 53, 69, 0.08), 0 1.5px 6px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Estilo para os botões Painel Admin e Sair */
+#adminPanelBtn,
+#logoutBtn {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Alinhamento dos botões */
+#adminPanelBtn,
+#logoutBtn {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Ajuste do container para centralizar os botões */
+.navbar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,0 +1,78 @@
+<!-- Painel Administrativo -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - WorkTime Control</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        /* Removendo estilos inline para manter o HTML limpo */
+    </style>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-light bg-white shadow-sm mb-4">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+                <img src="../assets/logo.png" alt="Logo" style="max-width:40px; max-height:40px;">
+                <span class="navbar-brand mb-0 h1">Painel Administrativo</span>
+            </div>
+            <div>
+                <button id="dashboardBtn" class="btn btn-outline-primary btn-sm">Dashboard</button>
+            </div>
+        </div>
+    </nav>
+    <div class="container flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 col-md-12">
+                <div class="card p-4 mb-4">
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between mb-3 gap-3">
+                        <div class="fw-bold fs-5">Registros dos Funcionários</div>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <input type="text" id="searchInput" class="form-control" placeholder="Buscar funcionário..."
+                                style="max-width:220px;">
+                            <select id="filterPeriodo" class="form-select" style="max-width:150px;">
+                                <option value="">Período</option>
+                                <option value="dia">Dia</option>
+                                <option value="semana">Semana</option>
+                                <option value="mes">Mês</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="adminTableContainer"></div>
+                </div>
+                <div class="card p-4 mb-4">
+                    <div class="fw-bold fs-5 mb-3">Solicitações de Registro</div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrationRequests">
+                            <!-- Aqui ficarão as solicitações reais de registro -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center text-muted py-3 small mt-auto">
+        Sistema de Controle de Horas e Atividades
+    </footer>
+    <script src="../js/admin.js"></script>
+    <script>
+        const dashboardBtn = document.getElementById('dashboardBtn');
+        dashboardBtn.onclick = () => window.location.href = '../pages/dashboard.html';
+    </script>
+</body>
+
+</html>

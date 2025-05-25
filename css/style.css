@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo com gradiente suave */
+body {
+    background: linear-gradient(135deg, #dc3545, #f8d7da);
+}
+
+/* Sombra mais suave na card */
+.card {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 2rem;
+    animation: fadeInUp 0.6s ease;
+}
+
+#timeLog li {
+    font-size: 1rem;
+}
+
+/* Animação para a card */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão mais chamativo */
+.btn-primary {
+    background-color: #dc3545;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #b02a37;
+}
+
+/* Logo animada */
+img {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Botão de Sair e Painel Admin com melhorias visuais */
+.btn-logout,
+.btn-admin {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-logout:hover,
+.btn-admin:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-logout {
+    margin-right: 1rem;
+}
+
+.btn-admin {
+    margin-left: 1rem;
+}
+
+/* Estilo para o botão Sair e Painel Admin */
+.btn-sair,
+.btn-painel-admin {
+    border-radius: 0.5rem;
+    /* Bordas arredondadas */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Transição suave */
+}
+
+.btn-sair:hover,
+.btn-painel-admin:hover {
+    transform: scale(1.05);
+    /* Leve aumento no tamanho ao passar o mouse */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Sombra ao passar o mouse */
+}

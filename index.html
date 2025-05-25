@@ -43,7 +43,10 @@
         // Redirecionamento inteligente
         const user = localStorage.getItem('wtc_user');
         if (user) {
-            window.location.href = 'pages/dashboard.html';
+            const currentPath = window.location.pathname;
+            if (!currentPath.includes('index.html')) {
+                window.location.href = 'pages/dashboard.html';
+            }
         }
     </script>
 </body>
